@@ -25,3 +25,4 @@ sqlparse==0.4.4
 uritemplate==4.1.1
 wheel==0.42.0
 wrapt==1.16.0
+gunicorn==21.2.0
