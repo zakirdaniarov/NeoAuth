@@ -27,19 +27,19 @@ SECRET_KEY = 'django-insecure-l_d49+wo53*+j#*w3)#ol33wjt%1x&=vr46et*$d*p6=!72p_r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['206.189.84.90', 'muha-backender.org.kg', '127.0.0.1']
+ALLOWED_HOSTS = ['152.42.174.83', 'marina-backender.org.kg', '127.0.0.1']
 
 AUTH_USER_MODEL = 'authorization.User'
 
 CORS_ALLOWED_ORIGINS = (
     'http://localhost:3000',
     'http://localhost:8000',
-    'https://muha-backender.org.kg',
+    'https://marina-backender.org.kg',
     'http://localhost:5173',
 )
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://localhost:5173',
-                        'http://localhost:8000', 'https://muha-backender.org.kg',]
+                        'http://localhost:8000', 'https://marina-backender.org.kg',]
 
 # Application definition
 
