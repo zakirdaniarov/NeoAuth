@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-l_d49+wo53*+j#*w3)#ol33wjt%1x&=vr46et*$d*p6=!72p_r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['152.42.174.83', 'kunasyl-backender.org.kg', '127.0.0.1']
+ALLOWED_HOSTS = ['152.42.174.83', 'kunasyl-backender.org.kg', '127.0.0.1', 'https://neobis-front-auth-gold.vercel.app']
 
 AUTH_USER_MODEL = 'authorization.User'
 
@@ -36,10 +36,11 @@ CORS_ALLOWED_ORIGINS = (
     'http://localhost:8000',
     'https://kunasyl-backender.org.kg',
     'http://localhost:5173',
+    'https://neobis-front-auth-gold.vercel.app',
 )
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://localhost:5173',
-                        'http://localhost:8000', 'https://kunasyl-backender.org.kg',]
+                        'http://localhost:8000', 'https://kunasyl-backender.org.kg', 'https://neobis-front-auth-gold.vercel.app']
 
 # Application definition
 
