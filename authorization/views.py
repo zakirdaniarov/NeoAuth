@@ -2,7 +2,7 @@ from django.contrib import auth
 from rest_framework import generics, status
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.views import APIView
-from .serializers import SignUpSerializer, UserActivationSerializer, LoginSerializer
+from .serializers import SignUpSerializer, UserActivationSerializer, LoginSerializer, ResendActivationEmailSerializer
 from rest_framework.response import Response
 from .models import User
 import jwt
@@ -34,6 +34,7 @@ class RegisterAPIView(generics.GenericAPIView):
 
 
 class ResendActivationEmailAPIView(APIView):
+    serializer_class = ResendActivationEmailSerializer
     permission_classes = [AllowAny]
 
     @extend_schema(
@@ -52,7 +53,6 @@ class ResendActivationEmailAPIView(APIView):
 
         send_activation_email(request, user)
         return Response({"message": "Activation email has been resent successfully."}, status=status.HTTP_200_OK)
-
 
 
 class EmailVerificationAPIView(APIView):
